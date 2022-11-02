@@ -202,11 +202,11 @@ int main(void)
     else
     {
       /* Toggle the LED_GREEN to indicate a wakeup from STANDBY */
-      for (uint32_t i = 0; i < 4; i++)
-      {
-        LL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-        LL_mDelay(100);
-      }
+//      for (uint32_t i = 0; i < 4; i++)
+//      {
+////        LL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+////        LL_mDelay(100);
+//      }
     }
 
   }
@@ -222,6 +222,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -430,7 +433,7 @@ void Configure_RTC(void)
   }
 
   /* Configure wakeup timer clock source: RTC/2 clock is selected  */
-  LL_RTC_WAKEUP_SetClock(RTC, LL_RTC_WAKEUPCLOCK_DIV_2);
+  LL_RTC_WAKEUP_SetClock(RTC, LL_RTC_WAKEUPCLOCK_DIV_16);
 
   /* Configure the Wake up timer to periodically wake up the system every 3 seconds.
    * Wakeup timer auto-reload value (WUT[15:0] in RTC_WUTR) is calculated as follow:

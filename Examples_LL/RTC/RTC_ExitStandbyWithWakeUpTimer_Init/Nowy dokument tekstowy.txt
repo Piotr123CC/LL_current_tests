@@ -1,0 +1,4 @@
+RTC+standby 0.47 uA  
+Standby 0.16 uA
+IWDG+standby 0.57uA   IWDG prescaler->256
+Dokładność 0.01 uA
